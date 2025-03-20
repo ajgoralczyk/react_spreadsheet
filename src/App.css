@@ -24,7 +24,7 @@
 .spreadsheet {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(101, 1fr);
+  grid-template-rows: repeat(21, 1fr);
   gap: 1px;
   background-color: var(--color-grey);
   width: fit-content;
@@ -32,7 +32,7 @@
 
 .row {
   display: grid;
-  grid-template-columns: repeat(101, 1fr);
+  grid-template-columns: repeat(21, 1fr);
   grid-template-rows: subgrid;
   gap: 1px;
   color: var(--color-black);
@@ -43,9 +43,22 @@
   color: var(--color-black);
   height: 1.5rem;
   width: 5rem;
-  padding: 2px;
 }
 
 .cell.header {
   background-color: var(--color-grey);
+}
+
+.cell > input {
+  width: 100%;
+    margin: 0;
+    display: block;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 0;
+    border: none;
+}
+
+.cell > p {
+  margin: 2px;
 }
