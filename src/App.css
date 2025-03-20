@@ -1,6 +1,51 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+  --color-black: #242424;
+  --color-white: #fffefd;
+  --color-grey: #efeded;
+  --color-dark-grey: #b8b8b8;
+}
+
+.spreadsheet-wrapper {
+  width: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  border-top: 1px solid var(--color-dark-grey);
+}
+
+.spreadsheet {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(101, 1fr);
+  gap: 1px;
+  background-color: var(--color-grey);
+  width: fit-content;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(101, 1fr);
+  grid-template-rows: subgrid;
+  gap: 1px;
+  color: var(--color-black);
+}
+
+.cell {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  height: 1.5rem;
+  width: 5rem;
+  padding: 2px;
+}
+
+.cell.header {
+  background-color: var(--color-grey);
 }
